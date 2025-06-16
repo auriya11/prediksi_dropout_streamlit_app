@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# prediksi_dropout_streamlit_app
-=======
 # Proyek Akhir: Menyelesaikan Permasalahan Perusahaan Edutech
 
 ## Business Understanding
@@ -78,6 +75,11 @@ Dashboard dibuat menggunakan Metabase dan dijalankan di Docker dengan nama conta
 
 ## Menjalankan Sistem Machine Learning
 
+Aplikasi ini menggunakan model Machine Learning untuk memprediksi status akhir mahasiswa berdasarkan data akademik dan demografis.
+
+**[Klik di sini untuk mencoba aplikasinya di Streamlit Cloud](https://auriya11-prediksi-dropout-streamlit-app.streamlit.app/)**
+
+---
 Prediksi status mahasiswa (**Dropout / Enrolled / Graduate**) dapat dilakukan melalui aplikasi **Streamlit** menggunakan file `app.py`.
 
 **Struktur File**
@@ -95,18 +97,18 @@ project_folder/
 - Membaca input dari user (fitur demografis & akademik)
 - Melakukan preprocessing dan scaling
 - Melakukan prediksi status mahasiswa
-- Menampilkan hasil prediksi langsung di dashboard interaktif
+- Menampilkan hasil prediksi langsung di dashboard interaktif (warna + grafik)
 
 **Cara Menjalankan Aplikasi Streamlit**
 
 **1. Pastikan seluruh dependensi sudah terinstal:**
-
+```bash
 `pip install -r requirements.txt`
 
 **2. Jalankan aplikasi:**
 
 `streamlit run app.py`
-
+```
 **3. Aplikasi akan terbuka di browser, biasanya di:**
 
 http://localhost:8501
@@ -116,21 +118,16 @@ http://localhost:8501
 Di dalam `app.py`, model, scaler, dan daftar fitur dimuat seperti ini:
 
 `import joblib`
+'import os'
 
 # === Load model dan scaler ===
 
-model = joblib.load(r"D:\dashboard_datascience\model\xgb_model.joblib")
-scaler = joblib.load(r"D:\dashboard_datascience\model\scaler.joblib")
-all_features = joblib.load(r"D:\dashboard_datascience\model\all_features.joblib")
-
-
-**Catatan:** Jika Anda ingin membuat script ini bisa digunakan lintas perangkat, disarankan untuk menggunakan path relatif, seperti:
-
-```
-import os
 model = joblib.load(os.path.join("model", "xgb_model.joblib"))
+scaler = joblib.load(os.path.join("model", "scaler.joblib"))
+all_features = joblib.load(os.path.join("model", "all_features.joblib"))
 
-```
+**Deploy Online**
+(https://auriya11-prediksi-dropout-streamlit-app.streamlit.app/)
 
 **Output Prediksi**
 
