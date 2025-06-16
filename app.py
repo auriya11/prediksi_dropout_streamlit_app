@@ -5,9 +5,9 @@ import joblib
 import matplotlib.pyplot as plt
 
 # === Load model dan scaler ===
-model = joblib.load(r"D:\dashboard_datascience\model\xgb_model.joblib")
-scaler = joblib.load(r"D:\dashboard_datascience\model\scaler.joblib")
-all_features = joblib.load(r"D:\dashboard_datascience\model\all_features.joblib")
+model = joblib.load("model/xgb_model.joblib")
+scaler = joblib.load("model/scaler.joblib")
+all_features = joblib.load("model/all_features.joblib")
 
 # === Top fitur penting ===
 important_features = [
