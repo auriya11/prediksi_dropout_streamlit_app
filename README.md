@@ -77,7 +77,7 @@ Dashboard dibuat menggunakan Metabase dan dijalankan di Docker dengan nama conta
 
 Aplikasi ini menggunakan model Machine Learning untuk memprediksi status akhir mahasiswa berdasarkan data akademik dan demografis.
 
-**[Klik di sini untuk mencoba aplikasinya di Streamlit Cloud](https://auriya11-prediksi-dropout-streamlit-app.streamlit.app/)**
+**[Klik di sini untuk mencoba aplikasinya di Streamlit Cloud](https://prediksidropoutappappgit-xk7juwgfdxynthtulgqkr5.streamlit.app/)**
 
 ---
 Prediksi status mahasiswa (**Dropout / Enrolled / Graduate**) dapat dilakukan melalui aplikasi **Streamlit** menggunakan file `app.py`.
@@ -127,7 +127,7 @@ scaler = joblib.load(os.path.join("model", "scaler.joblib"))
 all_features = joblib.load(os.path.join("model", "all_features.joblib"))
 
 **Deploy Online**
-(https://auriya11-prediksi-dropout-streamlit-app.streamlit.app/)
+(https://prediksidropoutappappgit-xk7juwgfdxynthtulgqkr5.streamlit.app/)
 
 **Output Prediksi**
 
